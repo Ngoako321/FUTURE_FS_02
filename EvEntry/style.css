@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+    --navy-blue: #14213D;
+    --light-navy: #3A4468;
+    --white: #f5f6f8;
+    --paper-white: #ffffff;
+    --red: red;
+    --maroon: #c1121f;
+    --border: #dce0e8;
+
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Ubuntu', sans-serif;
+    --nav-height: 76px;
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--navy-blue);
+    background: var(--white);
+
+}
+
+/* HEADER AND NAV */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--paper-white);
+    border-bottom: 1px solid var(--border);
+}
+
+nav {
+    height: var(--nav-height);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* LOGO */
+
+.logo h2 {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: var(--navy-blue);
+    letter-spacing: 0.2px;
+}
+
+/* NAV LINKS */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2.4rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--light-navy);
+    font-size: 0.95rem;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.2s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-image: -moz-radial-gradient(circle, var(--red) 1.5px, transparent 1.5px);
+    background-size: 6px 2px;
+    background-repeat: repeat-x;
+    opacity: 0;
+    transform: translateY(3px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
