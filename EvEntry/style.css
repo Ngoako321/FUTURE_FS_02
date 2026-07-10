@@ -92,3 +92,241 @@ nav ul li a::after {
     transform: translateY(3px);
     transition: opacity 0.2s ease, transform 0.2s ease;
 }
+
+nav ul li a:hover {
+    color: var(--navy-blue);
+}
+
+nav ul li a:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/* Buttons */
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+}
+
+.buttons a {
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.buttons a:first-child {
+    color: var(--light-navy);
+    transition: color 0.2s ease;
+}
+
+.buttons a:first-child:hover {
+    color: var(--navy-blue);
+
+}
+
+/*  Sign Up   */
+
+.buttons a:last-child {
+    position: relative;
+    background: var(--maroon);
+    color: var(--paper-white);
+    padding: 0.6rem 1.4rem 0.6rem 1.6rem;
+    border-radius: 4px;
+    transition: background 0.2s ease, transform 0.15s ease;
+
+}
+
+.buttons a:last-child::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    background: var(--paper-white);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 0 2-x var(--paper-white);
+}
+
+.buttons a:last-child:hover {
+    background: var(--maroon);
+    transform: translateY(-1px);
+}
+
+/* ------RESPONSIVE --------*/
+
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+  }
+
+  nav ul {
+    gap: 1.4rem;
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .buttons {
+    gap: 0.8rem;
+  }
+}
+
+/* ------HERO --------*/
+
+.hero {
+    position: relative;
+    background: var(--navy-blue);
+    padding: 7rem 2rem 6rem;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-family: var(--font-display);
+    font-size: 800;
+    font-size: clamp(2.2rem, 5vm, 3.4rem);
+    line-height: 1.15;
+    color: var(--paper-white);
+    margin-bottom: 1.4rem;
+}
+
+.hero-content p {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    color: rgba(245, 246, 248, 0.75);
+    max-width: 480px;
+    margin: 0 auto 2.4rem;
+    line-height: 1.6;
+}
+
+/* Buttons */
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.hero-content a {
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 0.85rem 1.8rem;
+    border-radius: 4px;
+    transition: all0.2s ease;
+}
+
+/* Primary: Browse Events */
+
+.hero-buttons a:first-child {
+    position: relative;
+    background: var(--maroon);
+    color: var(--paper-white);
+    padding-left: 2rem;
+}
+
+.hero-buttons a:first-child::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    background: var(--navy-blue);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 0 2px var(--navy-blue);
+}
+
+.hero-buttons a:first-child:hover {
+  background: #a10f1b;
+  transform: translateY(-1px);
+}
+
+/* Secondary: Create Event */
+
+.hero-buttons a:last-child {
+    background: transparent;
+    color: var(--paper-white);
+    border: 1.5px solid rgba(245,246,248, 0.4);
+}
+
+.features {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.features h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    color: var(--navy-blue);
+    margin-bottom: 3rem;
+}
+
+.feature-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.feature-card {
+    background: var(--paper-white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 2.4rm 1.8rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(20,33,61,0.08);
+}
+
+.feature-card i {
+    margin-top: 1.2rem;
+    font-size: 2rem;
+    color: var(--maroon);
+    margin-bottom: 1.2rem;
+    display: inline-block;
+}
+
+.feature-card h3 {
+    font-family: var(--font-body);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--navy-blue);
+    margin-bottom: 0.6rem;
+}
+
+.feature-card p {
+    font-size: 0.95rem;
+    color: var(--light-navy);
+    line-height: 1.6;
+    margin: 10px;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+    .feature-container {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+}
