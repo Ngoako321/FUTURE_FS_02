@@ -330,3 +330,62 @@ nav ul li a:hover::after {
         margin: 0 auto;
     }
 }
+
+
+
+.footer-content {
+    width: 100%;
+    background-color: var(--navy-blue);
+    padding: 3.5rem 2rem 2rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.6rem;
+    color: var(--paper-white);
+    margin-bottom: 0.6rem;
+}
+
+.footer-content > p {
+    font-size: 0.95rem;
+    color: rgba(245, 246, 248, 0.7);
+    margin-bottom: 1.8rem;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-bottom: 2.4rem;
+}
+
+.socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(245, 246, 248, 0.25);
+    color: var(--paper-white);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.socials a:hover {
+    background: var(--maroon);
+    border-color: var(--maroon);
+    transform: translateY(-2px);
+}
+
+.footer-content  p:last-child {
+    font-size: 0.8rem;
+    color: rgba(245, 246, 248, 0.5);
+    padding-top: 1.6rem;
+    border-top: 1px solid rgba(245, 246, 248, 0.12);
+    margin-bottom: 0;
+}
