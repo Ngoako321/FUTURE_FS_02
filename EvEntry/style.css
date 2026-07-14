@@ -97,7 +97,7 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 32px;
+    gap: 25px;
 }
 
 nav a{
@@ -195,10 +195,10 @@ nav a:hover {
     max-width: 1200px;
     margin: 0 auto 100px;
     padding: 0 20px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 28px;
-    position: relative;
 }
 
 
@@ -564,3 +564,91 @@ footer{
  
 }
  
+
+/*---------Sign Up-------- */
+
+.signup-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.signup-card {
+    width: 420px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 40px;
+    box-shadow: var(--shadow);
+}
+
+.signup-card h1{
+    text-align: center;
+    font-family: var(--font-heading);
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.signup-card p{
+    color: var(--text-muted);
+    margin-bottom: 25px;
+}
+
+.input-box {
+    display: flex;
+    align-items: center;
+    background: #182131;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 18px;
+    padding: 0 15px;
+}
+
+.input-box i {
+    color: var(--primary);
+    margin-right: 12px;
+}
+
+.input-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    color: var(--text);
+    padding: 16px 0;
+    font-size: 15px;
+}
+
+.input-box input::placeholder {
+    color: var(--text-muted);
+}
+
+.signup-card button {
+    width: 100%;
+    border: none;
+    background: var(--primary);
+    color: #06121A;
+    font-weight: 600;
+    padding: 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: .3s;
+}
+
+.signup-card button:hover{
+    transform: translateY(-4px);
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.login-link a{
+    color: var(--primary);
+    font-weight: 600;
+}
+
