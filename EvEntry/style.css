@@ -592,6 +592,7 @@ footer{
 }
 
 .signup-card p{
+    text-align: center;
     color: var(--text-muted);
     margin-bottom: 25px;
 }
@@ -652,3 +653,281 @@ footer{
     font-weight: 600;
 }
 
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 240px;
+    flex-shrink: 0;
+    background-color: var(--surface);
+    border-right: 1px solid var(--border);
+    padding: 30px 20px;
+}
+
+.sidebar h2 {
+    font-family: var(--font-heading);
+    color: var(--text);
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+}
+
+.sidebar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.sidebar li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color var(--transition), color var(--transition);
+}
+
+.sidebar li i{
+    width: 18px;
+    text-align: center;
+}
+
+.sidebar li:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text);
+}
+
+
+/* for a highlighted background */
+
+.sidebar li.active {
+    background-color: rgba(34, 211, 238, 0.12);
+    color: var(--primary);
+}
+
+
+/* -------Main Content Area -------*/
+
+.main {
+    flex: 1;  /* fill all remaining space next to sidebar   */
+    padding: 40px;
+    min-width: 0;
+}
+
+/*--------Top Bar------  */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.topbar h1 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    margin-bottom: 4px;
+}
+
+.topbar p{
+    color: var(--text-muted);
+}
+
+.top-icons {
+
+    display: flex;
+    gap: 22px;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}
+
+.top-icons i {
+    cursor: pointer;
+    transition: color var(--transition);
+}
+
+.top-icons i:hover {
+    color: var(--primary);
+}
+
+/*----------Stat Cards---------*/
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards side by side */
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 26px;
+    transition: transform var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card h3 {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.card h2 {
+    font-family: var(--font-mono);
+    color: var(--primary);
+    font-size: 2rem;
+}
+
+
+/*------Recent leads table ------*/
+
+.table {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 26px;
+    overflow-x: auto;
+}
+
+.table h2 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 480px;
+
+}
+
+th, td {
+    text-align: left;
+    padding: 14px 10px;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.92rem;
+}
+
+th {
+    color: var(--text-muted);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+td {
+    color: var(--text);
+}
+
+tr:last-child td{
+    border-bottom: none;
+}
+
+/* status pill badges */
+
+.contacted, .converted {
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.contacted {
+    background-color: rgba(129, 140, 248, 0.15);
+    color: var(--secondary);
+}
+
+.converted {
+    background-color: rgba(52, 211, 153, 0.15);
+    color: var(--success);
+}
+
+.table button {
+    background: transparent;
+    border: 1px solid var(--border-glow);
+    color: var(--primary);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.82rem;
+    cursor: pointer;
+    transition: background-color var(--transition), color var(--transition);
+}
+
+
+.table button:hover {
+    background-color: var(--primary);
+    color: #06121A;
+}
+
+/* ---------- Dashboard Responsive Styles ----------*/
+
+/* For Tablets: cards go from 3 columns to 2 */
+@media (max-width: 1024px){
+
+    .cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Small tablets / large phones: sidebar moves to the top */
+
+@media (max-width: 900px){
+    .dashboard{
+        flex-direction: column;
+    }
+
+    .sidebar{
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        padding: 16px 20px;
+
+    }
+
+    .sidebar h2{
+        margin-bottom: 16px;
+    }
+
+    .sidebar ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .main {
+        padding: 24px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Phones */
+
+@media (max-width: 600px){
+
+    .topbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .table{
+        padding: 18px;
+    }
+}
