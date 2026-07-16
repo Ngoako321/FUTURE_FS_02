@@ -10,6 +10,9 @@
     --primary: #22D3EE;
     --secondary: #818CF8;
     --success: #34D399;
+    --warning: #FACC15;
+    --danger: #F87171;
+
 
     /* Text colors */
     --text: #E7ECF3;
@@ -929,5 +932,172 @@ tr:last-child td{
 
     .table{
         padding: 18px;
+    }
+}
+
+
+/* --------LEADS MANAGEMENT-----*/
+
+header > div {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 40px;
+}
+
+header h1 {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    margin-bottom: 4px;
+}
+
+header p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* ------Search Bar -------*/
+
+.leads-actions {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 40px 60px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+}
+
+.search-box {
+    flex: 1;
+    min-width: 220px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #182131;
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    padding: 12px 20px;
+}
+
+.search-box {
+    color: var(--text-muted);
+}
+
+.search-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    color: var(--text);
+    font-size: 0.95rem;
+}
+
+.search-box input::placeholder {
+    color: var(--text-muted);
+}
+
+.add-btn {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--primary);
+    color: #06121A;
+    border: none;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 50px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: transform var(--transition);
+}
+
+.add-btn:hover {
+    transform: translateY(-2px);
+}
+
+.leads-actions table {
+    flex-basis: 100%;
+    margin-top: 10px;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.new {
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    background-color: rgba(250, 204, 21, 0.15);
+    color: var(--warning);
+}
+
+
+/* Edit / Delete Buttons */
+
+td button {
+    border: none;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    margin-right: 6px;
+    transition: background-color var(--transition), color var(--transition);
+}
+
+td button:first-of-type {
+    background: transparent;
+    border: 1px solid var(--border-glow);
+    color: var(--primary);
+}
+
+td button:first-of-type:hover {
+    background-color: var(--primary);
+    color: #06121A;
+}
+
+td button:last-of-type {
+    background-color: var(--primary);
+    color: #06121A;
+}
+
+td button:last-of-type:hover {
+    background-color: var(--danger);
+    color:#06121A;
+}
+
+
+/* ------LEADS MANAGEMENT RESPONSIVE STYLES ----------*/
+
+@media (max-width: 700px){
+
+    .leads-actions{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-box,.add-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .leads-actions table{
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 600px) {
+
+    header > div {
+        padding: 20px 20px;
+    }
+
+    header h1 {
+        font-size: 1.3rem;
     }
 }
