@@ -1101,3 +1101,278 @@ td button:last-of-type:hover {
         font-size: 1.3rem;
     }
 }
+
+/* ------- Add Lead Page ---------*/
+
+.add-lead-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.add-lead-card {
+    width: 100%;
+    max-width: 700px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 40px;
+    box-shadow: var(--shadow);
+}
+
+.add-lead-card h1 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: center;
+
+}
+
+.add-lead-card p {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 35px;
+}
+
+/* Inputs */
+
+.add-lead-card .input-box {
+    display: flex;
+    align-items: center;
+    background: #182131;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 0 18px;
+    margin-bottom: 18px;
+    transition: .3s;
+}
+
+.add-lead-card .input-box:hover {
+    border-color: var(--border-glow);
+}
+
+.add-lead-card .input-box:focus-within {
+    border-color: var(--primary);
+    box-shadow: 0 0 15px rgba(34, 211, 238, .15);
+}
+
+.add-lead-card .input-box i {
+    color: var(--primary);
+    margin-right: 15px;
+    font-size: 16px;
+}
+
+.add-lead-card input,
+.add-lead-card select {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text);
+    padding: 16px 0;
+    font-size: .95rem;
+    font-family: var(--font-body);
+}
+
+
+/*-----------Charts-----------*/
+
+.charts {
+    display: flex;
+    gap: 25px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.chart-card {
+    flex: 1;
+    min-width: 350px;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    padding: 24px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform var(--transition);
+}
+
+.chart-card:hover {
+    transform: translateY(-4px);
+}
+
+.chart-card h2 {
+    margin-bottom: 20px;
+    color: var(--text);
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+}
+
+.full-width {
+    width: 100%;
+}
+
+canvas {
+    width: 100%;
+    height: 320px;
+}
+
+/* --------Lead Details --------*/
+
+
+.lead-details {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 20px;
+}
+
+.details-card {
+    width: 100%;
+    max-width: 720px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 40px;
+    box-shadow: var(--shadow);
+}
+
+.details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+.details-grid h4 {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.details-grid p {
+    color: var(--text);
+    font-size: 0.65rem;
+}
+
+.notes {
+    background-color: #182131;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px 26px;
+    margin-bottom: 34px;
+}
+
+.notes h3 {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+}
+
+.note p {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+.details-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.details-buttons button,
+.details-buttons a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: var(--font-body);
+    cursor: pointer;
+    transition: background-color var(--transition), color var(--transition), transform var(--transition);
+}
+
+.edit-btn {
+    background: transparent;
+    border: 1px solid var(--border-glow) !important;
+    color: var(--primary);
+}
+
+.edit-btn:hover {
+    background-color: var(--primary);
+    color: #06121A;
+    transform: translateY(-2px);
+}
+
+.delete-btn {
+    background: transparent;
+    border: 1px solid rgba(248, 113, 113, 0.35) !important;
+    color: var(--danger);
+}
+
+.delete-btn:hover {
+    background-color: var(--danger);
+    color: #06121A;
+    transform: translateY(-2px);
+}
+
+.back-btn {
+    margin-left: auto;
+    background: transparent;
+    color: var(--text-muted);
+}
+
+.back-btn:hover {
+    color: var(--text);
+    transform: translateY(-2px);
+}
+
+/* Phones */
+@media (max-width: 600px){
+
+    .details-card {
+        padding: 26px;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .details-buttons {
+        width: 100%;
+    }
+
+    .back-btn {
+        margin-left: 0;
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 420px){
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -89,8 +89,36 @@
                     <h2>57</h2>
                 </div>
 
+                <div class="card">
+                    <h3>Total Leads</h3>
+                    <h2>245</h2>
+                </div>
+
             </section>
 
+
+            <section class="charts">
+
+                <div class="chart-card">
+                    <h2>Leads Per Month</h2>
+                    <canvas id="monthlyChart"></canvas>
+                </div>
+
+                <div class="chart-card">
+                    <h2>Lead Status</h2>
+                    <canvas id="statusChart"></canvas>
+                </div>
+
+            </section>
+
+            <section class="charts">
+
+                <div class="chart-card full-width">
+                    <h2>Lead Sources</h2>
+                    <canvas id="sourceChart"></canvas>
+                </div>
+
+            </section>
 
             <!-----Recent Leads------>
 
@@ -111,14 +139,25 @@
                         <td>John Smith</td>
                         <td>Microsoft</td>
                         <td><span class="contacted">Contacted</span></td>
-                        <td><button>View</button></td>
+                        <td>
+                            <a href="lead-details.html" class="view-btn">
+                                <i class="fa-solid fa-eye"></i>
+                                View
+                            </a>
+                        </td>
                     </tr>
 
                     <tr>
                         <td>David Brown</td>
                         <td>Google</td>
                         <td><span class="converted">Converted</span></td>
-                        <td><button>View</button></td>
+                        <td>
+                            <a href="lead-details.html" class="view-btn">
+                                <i class="fa-solid fa-eye"></i>
+                                View
+                            </a>
+                        </td>
+
                     </tr>
 
                 </table>
@@ -127,5 +166,8 @@
         </main>
     </div>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="dashboard.js"></script>
 </body>
 </html>

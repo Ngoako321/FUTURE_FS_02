@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeadFlow CRM | Client Lead Management System</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="add-lead-page">
+
+        <div class="add-lead-card">
+
+            <h1>Add New Lead</h1>
+            <p>Enter the Client's information below.</p>
+
+            <form>
+                <div class="input-box">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="Full Name">
+                </div>
+
+                <div class="input-box">
+                    <i class="fa-solid fa-building"></i>
+                    <input type="text" placeholder="Company">
+                </div> 
+                
+                <div class="input-box">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="Email Address">
+                </div> 
+
+                <div class="input-box">
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="text" placeholder="Phone Number">
+                </div> 
+
+                <div class="input-box">
+                    <i class="fa-solid fa-globe"></i>
+
+
+                    <select>
+                        <option>Lead Source</option>
+                        <option>Website</option>
+                        <option>Facebook</option>
+                        <option>Instagram</option>
+                        <option>LinkedIn</option>
+                        <option>Refferal</option>
+                        <option>Email Campaign</option>
+                    </select>
+
+                </div> 
+
+                <div class="input-box">
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    <select>
+                        <option>New</option>
+                        <option>Contacted</option>
+                        <option>Converted</option>
+                    </select>
+
+                </div>
+
+                <div class="textarea-box">
+                    <i class="fa-solid fa-note-sticky"></i>
+
+                    <textarea placeholder="Add notes about this lead..." rows="6"></textarea>
+
+                </div>
+
+                <button type="submit">
+                    <i class="fa-solid fa-floppy-disk"></i>
+                    Save Lead
+                </button>
+            </form>
+
+            <div class="back-link">
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Back to Dashboard
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
