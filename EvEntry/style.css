@@ -72,7 +72,7 @@ a {
 
 header {
     position: sticky;
-    top 0;
+    top: 0;
     background-color: var(--bg);
     border-bottom: 1px solid var(--border);
     z-index: 1000;
@@ -145,7 +145,7 @@ nav a:hover {
     align-items: center;
     text-align: center;
     padding: 8-px 20px;
-    background: linear-gradient(135deg, #0F1626, #0AE17);
+    background: linear-gradient(135deg, #0F1626, #0A0E1717);
 }
 
 .hero h1 {
