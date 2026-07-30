@@ -108,6 +108,35 @@ app.post("/api/leads", authenticateToken , (req, res) => {
     );
 });
 
+// ------- Delete Lead --------
+
+app.delete("/api/leads/:id", authenticateToken, (req, res) => {
+
+    const { id } = req.params;
+
+    const sql = "DELETE FROM leads WHERE id = ?";
+
+    db.query(sql, [id], (err, result) => {
+
+        if (err) {
+            console.error("Error deleting lead:", err);
+
+            return res.status(500).json({
+                message: "Could not delete lead."
+            });
+        }
+
+        if (result.affectedRows === 0) {
+            return res.status(404).json({
+                message: "Lead not found."
+            });
+        }
+        res.json({
+            message: "Lead deleted successfully!"
+        });
+    });
+});
+
 // -------- User SignUp ----------
 app.post("/api/signup", async (req, res) => {
 
